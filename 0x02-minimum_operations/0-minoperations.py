@@ -1,19 +1,33 @@
 #!/usr/bin/env python3
+import time
 
-
-def isEven(n: int) -> bool:
+def isEven(n: int) -> int:
     """Even number checker, returns boolean"""
-    checker = True if n % 2 == 0 else False
+    if n % 2 == 0:
+        checker = True
+    else:
+        checker = False
     return checker
+    
 
 
 def minOperations(n: int) -> int:
     """returns minimum number of operation"""
+    print("check the value of n: n = {}".format(str(n)))
     trackOps: int = 0
     leastOps: int = 2
+    #s = time.perf_counter()
+    #print("Computation started in ----- {} time -------".format(str(s)))
     while n > 1:
-        while isEven(n) == True:
+        #while n % leastOps == 0:
+        if  isEven(n):
             trackOps += leastOps
-            n / leastOps
+            n //= leastOps
+            #print("n={} div by leastOps={}:: Equals {}".format(str(n),str(leastOps),str(n)))
+        # else:
+        #     print("n == {}.".format(str(n)))
+        #     time.sleep(10)
         leastOps += 1
+    #elapsed = time.perf_counter() - s
+    #print("minOpstakes ------- {} time to compute -------".format(str(elapsed)))
     return trackOps
