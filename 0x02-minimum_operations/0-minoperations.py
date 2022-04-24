@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import time
-
+"""Minimum Operations"""
 
 def isEven(n: int) -> int:
     """Even number checker, returns boolean"""
@@ -9,7 +9,6 @@ def isEven(n: int) -> int:
     else:
         checker = False
     return checker
-
 
 def minOperations(n: int) -> int:
     """returns minimum number of operation"""
