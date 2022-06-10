@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""Island perimeter computing module.
-"""
-from typing import List
+"""Island perimeter"""
 
 
-def island_perimeter(grid: List[List[int]]) -> int:
+def island_perimeter(grid) -> int:
     """Island Perimeter"""
     visit = set()
 
