@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""Island perimeter computing module.
+"""
 from typing import List
 
 
 def island_perimeter(grid: List[List[int]]) -> int:
-    """ """
+    """Island Perimeter"""
     visit = set()
 
     def dfs(i, j):
