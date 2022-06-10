@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Island perimeter"""
+"""Island perimeter
+"""
 
 
 def island_perimeter(grid) -> int:
@@ -11,14 +12,12 @@ def island_perimeter(grid) -> int:
             return 1
         if (i, j) in visit:
             return 0
-
         visit.add((i, j))
         perimeter = dfs(i, j + 1)
         perimeter += dfs(i + 1, j)
         perimeter += dfs(i, j - 1)
         perimeter += dfs(i - 1, j)
         return perimeter
-
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j]:
