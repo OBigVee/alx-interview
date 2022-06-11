@@ -1,2 +1,2 @@
 # alx-interview
-Pascal's Triangle
+Interview preparation practices question
