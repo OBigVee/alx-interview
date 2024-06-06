@@ -14,3 +14,20 @@ There can be keys that do not have boxes
 The first box boxes[0] is unlocked
 Return True if all boxes can be opened, else return False
 """
+
+
+def canUnlockAll(boxes):
+    """Determines if boxes can be trackUnlockedBox"""
+    index = 0
+    trackUnlockedBox = {}
+
+    for box in boxes:
+        if len(box) == 0 or index == 0:
+            trackUnlockedBox[index] = "opened"
+        for key in box:
+            if key < len(boxes) and key != index:
+                trackUnlockedBox[key] = key
+        if len(trackUnlockedBox) == len(boxes):
+            return True
+        index += 1
+    return False
