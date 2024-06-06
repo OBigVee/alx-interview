@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """UTF-8 validator"""
 
+
 def validUTF8(data):
     """fucntions checks if a list of integers are valid UTF-8 codepoints.
     See <https://datatracker.ietf.org/doc/html/rfc3629#page-4>
@@ -58,7 +59,7 @@ def validUTF8(data):
             return False
     return True
 
-    
+
 # def validUTF8(data):
 #     """
 #         """
