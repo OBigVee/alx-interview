@@ -1,10 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Making Change."""
 
 
 def makeChange(coins, total):
     """makeChange method determines the fewest number of coins
     need to meet a given.
+    
     amount total when given a pile of coins of different values.
     """
     if total <= 0:
