@@ -22,3 +22,5 @@ def island_perimeter(grid) -> int:
         for j in range(len(grid[0])):
             if grid[i][j]:
                 return dfs(i, j)
+            
+            #return ""
